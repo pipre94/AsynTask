@@ -41,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(Integer... params) {
             int max = params [0];
             for (int i=0; i<=max; i++){
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 //vincular metodo progrerpublis, recible el parable del for i
                 publishProgress(i);
             }
